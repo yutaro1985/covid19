@@ -25,16 +25,19 @@ $background: #F8F9FA;
 
 @mixin card-h1 {
   @include font-size(24);
+  color: $gray-2;
   font-weight: bold; 
 }
 
 @mixin card-h2 {
   @include font-size(19);
+  color: $gray-2;
   font-weight: bold; 
 }
 
 @mixin body-text {
   @include font-size(16);
+  color: $gray-1;
   line-height: 160%;
   font-weight: normal;
 }
