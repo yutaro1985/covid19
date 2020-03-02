@@ -62,7 +62,7 @@ module.exports = {
       {
         locales: [
           { code: 'ja', iso: 'ja_JP' },
-          { code: 'en', iso: 'en-US' }
+          { code: 'en', iso: 'en_US' }
         ],
         defaultLocale: 'ja',
         vueI18n: {
