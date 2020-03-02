@@ -22,10 +22,17 @@ Vue.component('bar', {
   props: {
     options: {
       type: Object,
-      default: () => {}
+      default: () => {},
+      responsive: true,
+      maintainAspectRatio: false
     }
   },
   mounted() {
+    const ctx = document.getElementById('bar-chart').getContext('2d')
+    ctx.canvas.parentNode.style.height = '240px'
+    ctx.canvas.parentNode.style.width = '100%'
+    ctx.canvas.style.height = '240px'
+
     this.renderChart(this.chartData, this.options)
   }
 })

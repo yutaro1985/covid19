@@ -8,19 +8,16 @@
       :items="chartData.datasets"
       :items-per-page="-1"
       :hide-default-footer="true"
-      :height="200"
+      :height="240"
     />
   </data-view>
 </template>
 
 <style>
-  
-  
 </style>
 
 <script>
 import DataView from '@/components/DataView.vue'
-
 export default {
   components: { DataView },
   props: {

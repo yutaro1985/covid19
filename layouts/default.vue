@@ -20,6 +20,34 @@
     </div>
   </v-app>
 </template>
+<style lang="scss">
+.app {
+  background-color: inherit !important;
+}
+.navi {
+  flex: 0 1 200px;
+}
+.open {
+  height: 100vh;
+}
+.mainContainer {
+  flex: 1 1 auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100vh;
+}
+.loader {
+  height: 200px;
+  width: 150px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  img {
+    margin-bottom: 20px;
+  }
+}
+</style>
 <script>
 import ScaleLoader from 'vue-spinner/src/ScaleLoader.vue'
 import SideNavigation from '@/components/SideNavigation'
@@ -56,31 +84,3 @@ export default {
   }
 }
 </script>
-<style lang="scss">
-.app {
-  background-color: inherit !important;
-}
-.navi {
-  flex: 0 1 200px;
-}
-.open {
-  height: 100vh;
-}
-.mainContainer {
-  flex: 1 1 auto;
-  overflow-x: hidden;
-  overflow-y: auto;
-  height: 100vh;
-}
-.loader {
-  height: 200px;
-  width: 150px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
-  img {
-    margin-bottom: 20px;
-  }
-}
-</style>

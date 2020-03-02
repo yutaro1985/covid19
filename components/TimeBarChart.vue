@@ -3,16 +3,26 @@
     <template v-slot:button>
       <data-selector v-model="dataKind" />
     </template>
-    <bar :chart-data="displayData" :options="chartOption" :height="240" />
+    <div class="TimeBarChart-container">
+      <bar :chart-data="displayData" :options="chartOption" :height="240" class="TimeBarChart-bar" />
+    </div>
   </data-view>
 </template>
 
-<style></style>
+<style>
+.TimeBarChart-container {
+  height: 240px;
+}
+.TimeBarChart-bar {
+  position: relative;
+  width:100%;
+  height:100%;
+}
+</style>
 
 <script>
 import DataView from '@/components/DataView.vue'
 import DataSelector from '@/components/DataSelector.vue'
-
 export default {
   components: { DataView, DataSelector },
   props: {
@@ -36,7 +46,6 @@ export default {
       required: true,
       default: ''
     },
-
   },
   data() {
     return {
