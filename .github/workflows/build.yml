@@ -1,11 +1,11 @@
-name: staging deploy
+name: build check
 
 on:
   pull_request:
     branches:
       - staging
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
